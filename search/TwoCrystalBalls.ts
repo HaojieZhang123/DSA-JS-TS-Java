@@ -21,7 +21,7 @@ export default function two_crystal_balls(breaks: boolean[]): number {
     }
 
     // walk back one increment
-    i -= jumps;
+    i = i + 1 - jumps;
     // walk frwards
     for (let j = 0; j < jumps && i < breaks.length; ++j, ++i) {
         if (breaks[i]) {
