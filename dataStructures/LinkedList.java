@@ -15,14 +15,6 @@ class Node<T> {
         this.value = value;
         this.next = null;
     }
-
-    public T getValue() {
-        return this.value;
-    }
-
-    public void setValue(T value) {
-        this.value = value;
-    }
 }
 
 public class LinkedList {
@@ -203,7 +195,7 @@ public class LinkedList {
         list.append(7);
         list.append(9);
 
-        if (list.get(2).getValue() == 9) {
+        if (list.get(2).value == 9) {
             System.out.println("Success");
         } else {
             System.out.println("Fail");
