@@ -4,6 +4,7 @@ public class ArrayList<T> {
     public int length;
     private T[] array;
 
+    @SuppressWarnings("unchecked")
     public ArrayList(int capacity) {
         this.length = 0;
         // array casted because generic array allocation not allowes
@@ -76,6 +77,7 @@ public class ArrayList<T> {
         return removedItem;
     }
 
+    @SuppressWarnings("unchecked")
     private void resize() {
         int newCapacity = this.array.length == 0 ? 4 : this.array.length * 2;
         T[] newArray = (T[]) new Object[newCapacity];
